@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>This is a test</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<h1> JavaScript tutorial</h1>
+		<p>This is Harshavardhan</p>
+	</div>
+	<script>
+		var Emp=function(name,sal){
+			this.name=name;
+			this.sal=sal;
+
+			this.getDetails=()=>{
+				var x = {
+					Name: this.name,
+					Salary: this.sal,
+					Annual: this.sal * 12
+				};
+				return x;
+			}
+		};
+		var emp1=new Emp("harsha",35000);
+		var emp2=emp1.getDetails();
+		alert(emp2.Name+' salary:'+ emp2.Salary+' Annual :'+emp2.Annual);
+		alert(' Annual :'+emp1.getDetails().Annual);
+	</script>
+
+
+</body>
+</html>

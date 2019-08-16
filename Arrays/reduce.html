@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>This is a test</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>JavaScript tutorial</h1>
+      <p>This is Harshavardhan</p>
+    </div>
+    <div class="container"></div>
+    <script>
+      var nums = [2, 3, 54, 63, 7];
+
+      //var sum=nums.reduce(sum);
+      //function sum(pre,curr,index,array){
+      //	return pre+curr;
+      //}
+
+      var sum = sum(nums);
+      function sum(arr) {
+        return arr.reduce(function(a, b) {
+          return a + b;
+        });
+      }
+
+      console.log(sum);
+
+      var arr = [
+        { name: "abc", sales: 50, loc: "blr" },
+        { name: "pqr", sales: 300, loc: "cta" },
+        { name: "xyz", sales: 300, loc: "blr" },
+        { name: "mnq", sales: 100, loc: "cta" },
+        { name: "xyz", sales: 300, loc: "blr" }
+      ];
+
+      /*	var total=arr.reduce(sales);
+		function sales(pre,curr,ind,arr){
+
+			if(curr.loc=='blr'){
+				return pre+curr.sales;
+			}
+			return pre;
+		}*/
+
+      var total = sales(arr);
+      function sales(arr) {
+        return arr.reduce(function(a, b) {
+          if (a.loc === "blr" && b.loc === "blr") return a.sales + b.sales;
+        });
+      }
+
+      console.log(total);
+    </script>
+  </body>
+</html>

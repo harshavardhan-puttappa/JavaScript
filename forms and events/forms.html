@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>This is a test</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body id="body">
+    <div class="header">
+      <h1 id="heading">JavaScript tutorial</h1>
+      <p id="para">This is Harshavardhan</p>
+    </div>
+    <div>
+      <h1>Hi</h1>
+      <form action="#" name="login" onsubmit="return validateForm()">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" name="fname" id="fname" />
+        </div>
+        <br />
+        <div class="form=group">
+          <label>Last Name</label>
+          <input type="text" name="lname" id="lname" />
+        </div>
+        <br />
+        <div>
+          <label>Background Color</label>
+          <select name="bgd" id="bgd" onchange="changeBackground(this)">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+        </div>
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <script>
+      function changeBackground(x) {
+        console.log(x.value);
+        var heading = document.getElementById("heading");
+        heading.style.backgroundColor = x.value;
+      }
+
+      function validateForm() {
+        //var fname=document.getElementById('fname');
+        var fname = document.forms["login"]["fname"].value;
+
+        if (fname == null || fname == "") {
+          alert("Fname requrired!!");
+          return false;
+        }
+
+        if (fname.length < 3) {
+          alert("Fname must be atleast 3 characters!!");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

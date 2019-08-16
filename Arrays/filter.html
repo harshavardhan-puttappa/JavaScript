@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>This is a test</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>JavaScript tutorial</h1>
+      <p>This is Harshavardhan</p>
+    </div>
+    <div class="container"></div>
+    <script>
+      var student = [{ id: 111, percent: 92.1 }, { id: 222, percent: 86.2 }, { id: 333, percent: 98.3 }];
+
+      // 1st method
+      var res = student.filter(stu => stu.percent > 90.0);
+      console.log(res);
+
+      // 2nd method
+      //var x = check(student);
+
+      // function check(stu) {
+      //   /*var temp=[];
+      // for(var i=0;i<stu.length;i++){
+      // 	if(stu[i].percent>90.0){
+      // 		temp.push(stu[i]);
+      // 	}
+      // }
+      // return temp;*/
+
+      //   return stu.filter(function(element) {
+      //     return element.percent > 90.0;
+      //   });
+      // }
+      // console.log(x);
+
+      var array = [1, undefined, 3, undefined, 5];
+
+      function removeUndefined(arr) {
+        return arr.filter(function(element, index, array) {
+          return element;
+        });
+      }
+
+      console.log(removeUndefined(array));
+    </script>
+  </body>
+</html>

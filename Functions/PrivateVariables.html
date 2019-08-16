@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>This is a test</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>JavaScript tutorial</h1>
+      <p>This is Harshavardhan</p>
+    </div>
+    <script>
+      function Employee(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+        var fullName;
+
+        //private function
+        function privateGetFullName() {
+          fullName = firstName + " " + lastName;
+          return fullName;
+        }
+
+        //previliged function
+        this.preGetFullName = function() {
+          return privateGetFullName();
+        };
+
+        //public function
+        Employee.prototype.publicGetFullName = function() {
+          return this.preGetFullName();
+        };
+      }
+      var emp = new Employee("Aarush", "Harshavardhan");
+
+      emp.fullName = "Rachith Harshavardhan";
+      document.write(emp.publicGetFullName() + "<br>");
+      document.write(emp.fullName + "<br>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>This is a test</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>JavaScript tutorial</h1>
+      <p>This is Harshavardhan</p>
+    </div>
+    <div class="container"></div>
+    <script>
+      function check(stu) {
+        for (var i = 0; i < stu.length; i++) {
+          stu[i].distinction = stu[i].percent >= 80.0 ? true : false;
+        }
+        return stu;
+      }
+
+      function checkMap(stu) {
+        return stu.map(function(element, index, array) {
+          element.distinction = element.percent >= 80.0 ? true : false;
+          return element;
+        });
+      }
+
+      var student = [{ id: 111, percent: 92.1 }, { id: 222, percent: 86.2 }, { id: 333, percent: 98.3 }, { id: 444, percent: 78.3 }];
+
+      var x = checkMap(student);
+      console.log(x);
+
+      var nums = [9, 16, 25];
+      var x = nums.map(Math.sqrt);
+
+      console.log([9, 16, 25].map(Math.sqrt));
+      console.log(x);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+body {
+  text-align: center;
+  font-family: arial;
+  font-size: 18px;
+}
+
+li {
+  list-style: none;
+  line-height: 2px;
+  text-align: left;
+}
+
+.header {
+  background: #f4f4f4;
+  border-bottom: #ccc 3px solid;
+  padding: 20px;
+}
+
+.container {
+  width: 700px;
+  marks: 30px auto;
+}
+
+table,
+td,
+th {
+  text-align: center;
+}

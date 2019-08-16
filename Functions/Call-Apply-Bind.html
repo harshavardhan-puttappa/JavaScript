@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>This is a test</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<h1> JavaScript tutorial</h1>
+		<p>This is Harshavardhan</p>
+	</div>
+	<script>
+					var x ={
+						num:2
+					};
+
+					var method=function(a,b){
+					    return this.num+a+b
+                    }
+
+					var res=method.call(x,5,6); //call
+					console.log(res);
+
+					var arr=[3,4];
+					console.log(method.apply(x,arr)); //apply
+
+					var bound=method.bind(x);
+					console.log(bound(9,8));
+	</script>		
+</body>
+</html>

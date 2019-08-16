@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>This is a test</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>JavaScript tutorial</h1>
+      <p>This is Harshavardhan</p>
+    </div>
+    <div class="container"></div>
+
+    <script>
+      var sum = addNumbers(10, 20);
+      document.write(sum);
+
+      // 1. using function declaration
+      function addNumbers(firstNumber, secondNumber) {
+        var result = firstNumber + secondNumber;
+        return result;
+      }
+
+      // 2.1 anonymouus function expression
+
+      var add = function(firstNumber, secondNumber) {
+        var result = firstNumber + secondNumber;
+        return result;
+      };
+
+      var sum1 = add(10, 20);
+      document.write("<br>" + sum1);
+
+      // 2.2 named function expression
+
+      var factorial = function computeFactorial(number) {
+        if (number <= 1) return 1;
+        return number * computeFactorial(number - 1);
+      };
+
+      var result = factorial(5);
+      document.write("<br>" + result);
+
+      // 2.3 self invoking function expression
+
+      var res = (function add(a, b) {
+        return a + b;
+      })(5, 10);
+
+      document.write("<br>" + res);
+
+      function addnumbers(fn, sn) {
+        return fn + sn;
+      }
+
+      var result = addNumbers(10, 15);
+      document.write("<br>" + result);
+    </script>
+  </body>
+</html>

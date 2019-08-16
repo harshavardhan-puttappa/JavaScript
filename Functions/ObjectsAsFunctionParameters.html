@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>This is a test</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="header">
+		<h1> JavaScript tutorial</h1>
+		<p>This is Harshavardhan</p>
+	</div>
+	<script>
+		var Emp=function () {
+			this.name="";
+			this.age= 0;
+
+			this.addEmployee=(o)=> {
+				this.name=o.name;
+				this.age=o.age;
+			};
+
+			this.display=()=>{
+				document.write(this.name+' is of '+this.age+' years');
+				document.write('<br>');
+			}
+		};
+		var emp1= new Emp();
+		emp1.name="harsha";
+		emp1.age=20;
+
+		var emp2=new Emp();
+		emp2.addEmployee(emp1);
+
+		emp1.display();
+		emp2.display();
+
+		alert(emp1.name+' is of '+emp1.age +' years');
+	</script>
+
+
+</body>
+</html>

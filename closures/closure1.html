@@ -1,0 +1,15 @@
+<html>
+<head>
+</head>
+<body>
+    <script>
+        var incrementCount=(function(){
+            var count=0;
+            return function(){
+                return ++count;
+            };
+        })();
+	</script>
+    <input type="button" value="click" onclick="alert(incrementCount());">
+</body>
+</html>

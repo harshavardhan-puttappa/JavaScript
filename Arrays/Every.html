@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>This is a test</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>JavaScript tutorial</h1>
+      <p>This is Harshavardhan</p>
+    </div>
+    <div class="container"></div>
+
+    <script>
+      var integers = [10, 23, 65, 86, 21, 12, 99];
+
+      var lessThanFifty = integers.every(ele => ele < 150);
+      console.log(lessThanFifty);
+
+      function lessthan(arr) {
+        return arr.every(function(element) {
+          return element < 100;
+        });
+      }
+
+      var result = lessthan(integers);
+      console.log(result);
+
+      function checkdatatype(arr, type) {
+        return arr.every(function(element) {
+          return typeof element === type;
+        }, type);
+      }
+
+      var type = checkdatatype(["abc", "pqr", "xyz", 66], "string");
+      console.log(type);
+    </script>
+  </body>
+</html>

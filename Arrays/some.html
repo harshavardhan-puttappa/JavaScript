@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>This is a test</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>JavaScript tutorial</h1>
+      <p>This is Harshavardhan</p>
+    </div>
+    <div class="container"></div>
+
+    <script>
+      var integers = [10, 23, 65, 86, 21, 12, 101];
+
+      function greaterthan100(arr) {
+        return arr.some(function(element) {
+          return element > 100;
+        });
+      }
+
+      var result = greaterthan100(integers);
+      console.log(result);
+
+      function checkeven(arr) {
+        return arr.some(function(element) {
+          return element % 2 == 0;
+        });
+      }
+
+      var even = checkeven(integers);
+      console.log(even);
+    </script>
+  </body>
+</html>

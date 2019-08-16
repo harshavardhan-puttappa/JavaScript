@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>This is a test</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>JavaScript tutorial</h1>
+      <p>This is Harshavardhan</p>
+    </div>
+    <div class="container"></div>
+    <script>
+      var array = [4, 9, 7, 5, 3, 1];
+
+      var sorted = array.sort();
+
+      var names = ["Harsha", "Aarush", "Rachith"];
+
+      document.write(sorted.toString() + "<br/>");
+      document.write(names.sort() + "<br/>");
+
+      var nums = [10, 2, 30, 6];
+
+      function sortnumbers(a, b) {
+        return a - b;
+      }
+      document.write(nums.sort(sortnumbers) + "<br/>");
+
+      var arr = [{ name: "NY", count: 20 }, { name: "NJ", count: 5 }, { name: "JFK", count: 60 }, { name: "ORD", count: 1 }];
+
+      function sortFun(obj1, obj2) {
+        return obj1.count - obj2.count;
+      }
+      arr.sort(sortFun);
+      console.log(arr);
+    </script>
+  </body>
+</html>

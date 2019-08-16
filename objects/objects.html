@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>This is a test</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>JavaScript tutorial</h1>
+      <p>This is Harshavardhan</p>
+    </div>
+    <div class="container"></div>
+
+    <script>
+      // 1. object literal
+      var person = {
+        fname: "Aarush",
+        lname: "Harshavardhan",
+        age: 5,
+        childern: ["Aarush", "Rachith"],
+        address: {
+          city: "Moodabidri",
+          state: "karnataka",
+          country: "India"
+        },
+        name: function() {
+          return this.fname + " " + this.lname;
+        }
+      };
+
+      console.log(person.name());
+
+      //person.children.forEach(function(child){
+
+      //	console.log(child);
+      //});
+
+      // 2. constructor pattern
+
+      function Person(name, age, address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+
+        this.display = function() {
+          return this.name + " is of age: " + this.age;
+        };
+      }
+
+      var harsha = new Person("harsha", 32, "moodabidri");
+      var ra = new Person("rachith", 1.5, "moodabidri");
+      document.write(harsha.name);
+      console.log(ra.display());
+
+      //arrays of objects
+
+      var users = [
+        {
+          name: "Harsha",
+          age: 32
+        },
+        {
+          name: "Aarush",
+          age: 5
+        },
+        {
+          name: "Rachith",
+          age: 2
+        }
+      ];
+
+      console.log(users[0]["name"]);
+    </script>
+  </body>
+</html>
