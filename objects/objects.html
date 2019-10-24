@@ -32,17 +32,14 @@
       console.log(person.name());
 
       //person.children.forEach(function(child){
-
       //	console.log(child);
       //});
 
       // 2. constructor pattern
-
       function Person(name, age, address) {
         this.name = name;
         this.age = age;
         this.address = address;
-
         this.display = function() {
           return this.name + " is of age: " + this.age;
         };
@@ -54,7 +51,6 @@
       console.log(ra.display());
 
       //arrays of objects
-
       var users = [
         {
           name: "Harsha",
@@ -69,7 +65,6 @@
           age: 2
         }
       ];
-
       console.log(users[0]["name"]);
     </script>
   </body>

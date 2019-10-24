@@ -7,7 +7,7 @@ var string = "This is Harshavardhan!";
 module.exports.myFunction = myFunction;
 module.exports.string = string;
 
-// Another method of exportin the module
+// Another method of exporting the module
 module.exports = {
   myFunction: myFunction,
   string: string
