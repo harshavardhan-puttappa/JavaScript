@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Select Background color</h1>
+    <select name="color" id="color" onchange="setColor(this)">
+      <option value="red">red</option>
+      <option value="green">green</option>
+      <option value="skyblue">skyblue</option>
+    </select>
+
+    <script>
+      window.onload = function() {
+        if (document.cookie.length != 0) {
+          var nameValueArray = document.cookie.split("=");
+          document.bgColor = nameValueArray[1];
+          document.getElementById("color").value = nameValueArray[1];
+        }
+      };
+      function setColor(color) {
+        console.log(color.value);
+        document.bgColor = color.value;
+        document.cookie = "color=" + color.value + ";expires=Mon,11 Nov 2019 01:00:00 UTC;";
+        console.log(document.cookie);
+      }
+    </script>
+  </body>
+</html>
