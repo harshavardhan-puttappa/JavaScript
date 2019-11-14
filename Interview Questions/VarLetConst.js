@@ -21,7 +21,7 @@ function test() {
 
 test();
 
-function a() {
+function aa() {
   var a = 20;
   if (true) {
     var a = 30;
@@ -29,4 +29,4 @@ function a() {
   }
   console.log(a);
 }
-a();
+aa();
