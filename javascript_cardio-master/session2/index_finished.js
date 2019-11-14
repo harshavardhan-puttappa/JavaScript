@@ -96,11 +96,11 @@ function isAnagram(str1, str2) {
 // Helper function
 function formatStr(str) {
   return str
-    .replace(/[^\w]/g, '')
+    .replace(/[^\w]/g, "")
     .toLowerCase()
-    .split('')
+    .split("")
     .sort()
-    .join('');
+    .join("");
 }
 
 // CHALLENGE 5: LETTER CHANGES
@@ -110,8 +110,8 @@ function formatStr(str) {
 
 function letterChanges(str) {
   let newStr = str.toLowerCase().replace(/[a-z]/gi, char => {
-    if (char === 'z' || char === 'Z') {
-      return 'a';
+    if (char === "z" || char === "Z") {
+      return "a";
     } else {
       return String.fromCharCode(char.charCodeAt() + 1);
     }
@@ -123,6 +123,6 @@ function letterChanges(str) {
 }
 
 // Call Function
-const output = letterChanges('Hello There');
+const output = letterChanges("Hello There");
 
 console.log(output);
