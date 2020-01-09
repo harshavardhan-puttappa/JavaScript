@@ -6,8 +6,3 @@ const f2 = function() {
 };
 
 console.log(f1 === f2);
-
-f1.prototype = function display() {
-  console.log("proto function");
-};
-console.log(f1);

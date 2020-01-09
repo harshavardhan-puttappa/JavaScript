@@ -29,15 +29,6 @@
 // console.log(a);
 // a = "";
 
-// const f1 = function() {
-//   console.log("f1");
-// };
-// const f2 = function() {
-//   console.log("f2");
-// };
-
-// console.log(f1 == f2);
-
 // function add(...n) {
 //   return n.reduce((a, b) => {
 //     return a + b;
@@ -48,7 +39,31 @@
 
 // console.log([1, 2, 3, 4, 5].map(e => e > 3));
 
-const arr = [1, 2, 3];
+// const arr = [1, 2, 3];
 
-console.log(arr.findIndex(e => e == 2));
-console.log(arr.indexOf(2));
+// console.log(arr.findIndex(e => e == 2));
+// console.log(arr.indexOf(2));
+
+// const user = {
+//   name: "virat kohli",
+//   age: 33
+// };
+
+// function display(name, age) {
+//   return "Name:" + name + ", age=" + age;
+// }
+
+// const funcall1 = display.call(user.name, user.age); // displays: {Name: 33,age: undefined}
+// const funcall2 = display("virat kohli", 33); // displays: {Name: virat kohli,age: 33}
+
+// console.log("Funcall1:" + funcall1);
+// console.log("Funcall2:" + funcall2);
+
+// //* xyz.js
+// setTimeout(() => {
+//   module.exports = { a: "harsha" };
+// }, 0);
+
+// //* abc.js
+// var xyz = require("./xyz");
+// console.log(xyz);

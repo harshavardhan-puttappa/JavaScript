@@ -12,7 +12,7 @@ var foo = {
 // var bar = { ...foo };
 // console.log(bar);
 
-// Object.create
+// Object.assign
 // var test = Object.assign({}, foo);
 // test.name = "rachith";
 // foo.address.city = "harshavardhan";

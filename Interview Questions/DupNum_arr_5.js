@@ -1,4 +1,4 @@
-var arr = [4, 10, 12, 15, 15, 20];
+var arr = [4, 10, 15, 11, 15, 20];
 
 findDuplicateElementDivisibleBy5(arr);
 

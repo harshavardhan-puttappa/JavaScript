@@ -9,24 +9,24 @@ var obj = {
 function foo() {
   console.log(this.a);
 }
-//var x = obj.getA;
-//console.log(x()); // Prints undefined
-obj.getA(); // prints 20 & undefined
+var x = obj.getA;
+x();
+obj.getA();
 
-x = 10;
-function test() {
-  console.log(this.x); // both statements refers to global value x
-  console.log(x);
-}
+// x = 10;
+// function test() {
+//   console.log(this.x); // both statements refers to global value x
+//   console.log(x);
+// }
 
-test();
+// test();
 
-function aa() {
-  var a = 20;
-  if (true) {
-    var a = 30;
-    console.log(a);
-  }
-  console.log(a);
-}
-aa();
+// function aa() {
+//   var a = 20;
+//   if (true) {
+//     var a = 30;
+//     console.log(a);
+//   }
+//   console.log(a);
+// }
+// aa();
