@@ -1,0 +1,23 @@
+JS: 
+* inheritance
+* debouncing and throttling
+* Closures
+* Static variables
+* Generators
+* Arrow functions
+
+Performace of Applications: 
+* Rerendering
+* debouncing and throttling
+* pagination
+* lazy loading
+* code reviews
+
+Node: 
+* setImmediate
+* process
+
+CSS: 
+* Box modal
+* Flex box
+
